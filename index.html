@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TPN Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="tpn.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Total Parenteral Nutrition (TPN) Calculator</h1>
+        <p>Created by Kevin Leung, Registered Dietitian Nutritionist</p>
+      </div>
+      
+      <div id="dextrose" class="mt-5 mb-3">
+        <label for="dextrose">Dextrose (Using 70% stock solution):</label>
+        <input id="dextroseInput" type="number" class="form-control form-control-lg" placeholder="Grams Dextrose">
+      </div>
+      
+      <div id="protein" class="my-3">
+        <label for="protein">Protein (Using 10% stock solution):</label>
+        <input id="proteinInput" type="number" class="form-control form-control-lg" placeholder="Grams Protein">
+      </div>
+       
+      <div id="lipids" class="my-3">
+        <label for="Lipids">Lipids (Using 20% stock solution):</label>
+        <input id="lipidsInput" type="number" class="form-control form-control-lg" placeholder="Grams Lipids">
+      </div>
+      
+      <button id="calculate" class="btn btn-lg">Calculate!</button>
+      
+      <div class="card my-4">
+        <div class="card-body">
+          <h5><strong>Don't forget! Add ~150 milliliters / 0.15 Liters for electrolytes</strong></h5>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-body">
+          <h3>Minimum total fluids (milliliters):</h3>
+          <div id="result">You need a minimum of <span id="fluidml">0</span> milliliters for the TPN to fit!</div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-body">
+          <h3>Minimum total fluids (Liters):</h3>
+          <div id="result">You need a minimum of <span id="fluidliters">0</span> liters for the TPN to fit! </div>
+        </div>
+      </div>
+    </div>
+    <script src="tpn.js"></script>
+  </body>
+</html>
