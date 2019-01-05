@@ -1,0 +1,29 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: #9ed9c5;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: 3.25rem;
+}
+
+.title p {
+  font-size: 1.25rem;
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#calculate {
+  background: #5c7893;
+  color: white;
+}
+
+#result {
+  font-size: 1.5rem;
+}
