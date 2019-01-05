@@ -6,6 +6,10 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+.container {
+  margin-top: 5rem;
+}
+
 h1 {
   font-size: 3.25rem;
 }
