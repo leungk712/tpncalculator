@@ -14,6 +14,12 @@
         <p>Created by Kevin Leung, Registered Dietitian Nutritionist</p>
       </div>
       
+      <div class="anthropometrics">
+        <h3>Weight - Pounds</h3>
+        <div class="msg"></div>
+        <input id="weight" type="number" class="form-control form-control-lg mt-4" placeholder="Enter weight in pounds...">
+      </div>
+      
       <div id="dextrose" class="mt-5 mb-3">
         <label for="dextrose">Dextrose (Using 70% stock solution):</label>
         <input id="dextroseInput" type="number" class="form-control form-control-lg" placeholder="Grams Dextrose">
@@ -28,6 +34,11 @@
         <label for="Lipids">Lipids (Using 20% stock solution):</label>
         <input id="lipidsInput" type="number" class="form-control form-control-lg" placeholder="Grams Lipids">
       </div>
+      
+      <div id="time" class="my-3">
+        <label for="Time">Duration of TPN (hours)</label>
+        <input id="hoursInput" type="number" class="form-control form-control-lg" placeholder="TPN Duration (Hours)">
+       </div>
       
       <button id="calculate" class="btn btn-lg">Calculate!</button>
       
@@ -50,6 +61,14 @@
           <div id="result">You need a minimum of <span id="fluidliters">0</span> liters for the TPN to fit! </div>
         </div>
       </div>
+      
+      <div id="gir-card" class="card">
+        <div class="card-body">
+          <h2>Glucose Infusion Rate (GIR):</h2>
+          <div id="result">The glucose infusion rate of this TPN over <span id="hours">0</span> hours is <span id="gir">0</span></div>
+        </div>
+      </div>      
+      
     </div>
     <script src="tpn.js"></script>
   </body>
