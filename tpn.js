@@ -6,9 +6,10 @@ const calculate = document.querySelector("#calculate").addEventListener("click",
 
 // RESTART BUTTON
 
-const restart = document.querySelector("#restart").addEventListener("click", function(){
-  console.log("you have restarted!!!!");
+const reset = document.querySelector("#reset").addEventListener("click", function(){
+  location.reload();
 });
+
 
 // FUNCTION CALLS
 
@@ -17,19 +18,26 @@ protein();
 lipids();
 time();
 buttonlb();
-restart();
+calories();
 
 function tpn(){
-  const total = dextrose() + protein() + lipids() + 150;
   const gramsDex = document.getElementById("dextroseInput").value;
-  const tpnHours = document.querySelector("#hoursInput").value;
-  const lbValue = buttonlb() /  2.2;
   const gir = document.getElementById("gir");
+  const tpnHours = document.querySelector("#hoursInput").value;
+  const caloriesText = document.querySelector("#calories");
+  const caloriesKg = document.querySelector("#calories-kg");
+  const caloriesPro = document.querySelector("#protein-kg");
+  const proteinGrams = document.getElementById("proteinInput").value;
+  const total = dextrose() + protein() + lipids() + 150;
+  const lbValue = buttonlb() /  2.2;
   const girTotal = (gramsDex / lbValue / time()).toFixed(2);
   fluidml.textContent = total;
-  fluidliters.textContent = total / 1000;
+  fluidliters.textContent = (total / 1000).toFixed(2);
   hours.textContent = tpnHours;
   gir.textContent = girTotal;
+  caloriesText.textContent = calories();
+  caloriesKg.textContent = (calories() / lbValue).toFixed(1);
+  caloriesPro.textContent = (proteinGrams / lbValue).toFixed(1);
 }
 
 // DEXTROSE
@@ -69,4 +77,14 @@ function time(){
 function buttonlb() {
    const lbValue = document.querySelector("#weight").value;
    return lbValue
+}
+
+// CALORIES
+
+function calories(){
+  const dexCal = document.getElementById("dextroseInput").value * 3.4;
+  const proCal = document.getElementById("proteinInput").value * 4;
+  const lipCal = document.getElementById("lipidsInput").value * 10;
+  const macroTotals = dexCal + proCal + lipCal;
+  return macroTotals
 }
