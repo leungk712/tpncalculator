@@ -3,7 +3,6 @@
   <head>
     <title>TPN Calculator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="tpn.css">
   </head>
@@ -16,61 +15,71 @@
       </div>
       
       <div class="anthropometrics">
-        <h3>Weight - Pounds</h3>
-        <div class="msg"></div>
+        <h2 class="anthropometrics-title bold margin">Weight - Pounds
+          <span id="kg-show"></span>
+        </h2>
         <input id="weight" type="number" class="form-control form-control-lg mt-2" placeholder="Enter weight in pounds...">
       </div>
       
-      <h3 class="mt-3">Macronutrients</h3>
-      <div id="dextrose" class="mt-3 mb-3">
+      <h2 class="macronutrients-title bold margin">Macronutrients</h2>
+      <div id="dextrose" class="margin">
         <label for="dextrose">Dextrose (Using 70% stock solution):</label>
         <input id="dextroseInput" type="number" class="form-control form-control-lg" placeholder="Grams Dextrose">
       </div>
       
-      <div id="protein" class="my-3">
+      <div id="protein" class="margin">
         <label for="protein">Protein (Using 10% stock solution):</label>
         <input id="proteinInput" type="number" class="form-control form-control-lg" placeholder="Grams Protein">
       </div>
        
-      <div id="lipids" class="my-3">
+      <div id="lipids" class="margin">
         <label for="Lipids">Lipids (Using 20% stock solution):</label>
         <input id="lipidsInput" type="number" class="form-control form-control-lg" placeholder="Grams Lipids">
       </div>
       
-      <div id="time" class="my-3">
+      <div id="time" class="margin">
         <label for="Time">Duration of TPN (hours)</label>
         <input id="hoursInput" type="number" class="form-control form-control-lg" placeholder="TPN Duration (Hours)">
        </div>
       
-      <button id="calculate" class="btn btn-lg">Calculate!</button>
+      <button id="calculate" class="btn btn-lg btn-block">Calculate</button>
+      <button id="reset" class="btn btn-lg btn-block">Restart</button>
       
-      <div class="card my-4">
-        <div class="card-body">
-          <h5><strong>Don't forget! Add ~150 milliliters / 0.15 Liters for electrolytes</strong></h5>
+      <div class="cards">
+        <div class="card electrolytes-card">
+          <div class="card-body">
+            <h5><strong>Don't forget! Add ~150 milliliters / 0.15 Liters for electrolytes</strong></h5>
+          </div>
         </div>
-      </div>
-    
-      <div class="card">
-        <div class="card-body">
-          <h3>Minimum total fluids (milliliters):</h3>
-          <div id="result">You need a minimum of <span id="fluidml">0</span> milliliters for the TPN to fit!</div>
+
+        <div class="card milliliters-card">
+          <div class="card-body">
+            <h3>Minimum total fluids (Milliliters):</h3>
+            <div class="result">You need a minimum of <span id="fluidml">__</span> milliliters for the TPN to fit!</div>
+          </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-body">
-          <h3>Minimum total fluids (Liters):</h3>
-          <div id="result">You need a minimum of <span id="fluidliters">0</span> liters for the TPN to fit! </div>
+
+        <div class="card liters-card">
+          <div class="card-body">
+            <h3>Minimum total fluids (Liters):</h3>
+            <div class="result">You need a minimum of <span id="fluidliters">__</span> liters for the TPN to fit! </div>
+          </div>
         </div>
-      </div>
-      
-      <div id="gir-card" class="card mb-4">
-        <div class="card-body">
-          <h2>Glucose Infusion Rate (GIR):</h2>
-          <div id="result">The glucose infusion rate of this TPN over <span id="hours">0</span> hours is <span id="gir">0</span></div>
+
+        <div class="card gir-card">
+          <div class="card-body">
+            <h3>Glucose Infusion Rate (GIR):</h3>
+            <div class="result">The glucose infusion rate of this TPN over <span id="hours">__</span> hours is <span id="gir">__</span> mg/kg/min</div>
+          </div>
         </div>
-      </div>      
-      
+        
+       <div class="card calories-card">
+        <div class="card-body">
+          <h3>Calories:</h3>
+          <div class="result">The TPN provides <span id="calories">__</span> calories, which is <span id="calories-kg">__</span> calories per kilogram body weight and <span id="protein-kg">__</span> grams protein per kilogram body weight</div>
+        </div>
+       </div>     
+     </div>
     </div>
     <script src="tpn.js"></script>
   </body>
