@@ -4,22 +4,34 @@ body {
   background: #9ed9c5;
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.25rem;
+}
+
+.title h5 {
+  margin: 1.75rem 0; 
 }
 
 .container {
-  margin-top: 5rem;
+  margin-top: 3rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.margin {
+  margin: 1rem auto;
+}
+
+.cards {
+  margin: 1.5rem 0;
 }
 
 h1 {
   font-size: 3.25rem;
 }
 
-.title p {
-  font-size: 1.25rem;
-}
-
 label {
-  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -28,6 +40,11 @@ label {
   color: white;
 }
 
-#result {
+#reset {
+  background: #a23131;
+  color: white;
+}
+
+.result {
   font-size: 1.5rem;
 }
