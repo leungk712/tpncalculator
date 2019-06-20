@@ -1,4 +1,4 @@
-#TPNCalculator! (https://leungk712.github.io/tpncalculator/)
+# [TPNCalculator!] (https://leungk712.github.io/tpncalculator/)
 
 As a Clinical Dietitian, I work with total parenteral nutrition (TPN) on a consistent basis whether patients are in the
 critical care unit or general surgery floor. Total Parenteral Nutrition is a way to deliver nutrients (carbohydrates, 
