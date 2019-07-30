@@ -1,12 +1,17 @@
 // FINAL CALCULATION 
 
-const calculate = document.querySelector("#calculate").addEventListener("click", function(){
-  tpn();
+const calculate = document.querySelector("#calculate").addEventListener("click", () => {
+  let lbValue = document.querySelector("#weight").value;
+  if(lbValue === '' || lbValue === 0 || lbValue < 0) {
+   alert('Please type in a weight in pounds');
+  } else{
+    tpn();
+  }
 });
 
 // RESTART BUTTON
 
-const reset = document.querySelector("#reset").addEventListener("click", function(){
+const reset = document.querySelector("#reset").addEventListener("click", () => {
   location.reload();
 });
 
