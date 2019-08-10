@@ -13,15 +13,6 @@ const calculate = document.querySelector("#calculate").addEventListener("click",
 
 const reset = document.querySelector("#reset").addEventListener("click", () => location.reload());
 
-// FUNCTION CALLS
-
-dextrose();
-protein();
-lipids();
-time();
-pounds();
-calories();
-
 // TPN
 
 const tpn = () => {
@@ -92,3 +83,12 @@ const calories = () => {
   const macroTotals = dexCal + proCal + lipCal;
   return macroTotals
 };
+
+// FUNCTION CALLS
+
+dextrose();
+protein();
+lipids();
+time();
+pounds();
+calories();
